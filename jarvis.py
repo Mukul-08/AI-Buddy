@@ -23,16 +23,16 @@ def speak(audio):
 def wishMe():
     hour = int(datetime.datetime.now().hour)
     if hour >= 0 and hour < 12:
-        speak("Good Moring Sir!")
-        speak("I am Jarvis please tell me how can i help you")
+        speak("Good Moring Buddy!")
+        speak("I am your Buddy please tell me how can i help you")
     
     elif hour>=12 and hour < 18:
-        speak("Good Afternon Sir!")
-        speak("I am Jarvis please tell me how can i help you")
+        speak("Good Afternon Buddy!")
+        speak("I am your Buddy please tell me how can i help you")
     
     else:
-        speak("Good Evening Sir!")
-        speak("I am Jarvis please tell me how can i help you")
+        speak("Good Evening Buddy!")
+        speak("I am your Buddy please tell me how can i help you")
      
 
 def takeCommand():
@@ -79,11 +79,11 @@ if __name__== "__main__" :
        webbrowser.open("youtube.com")
     
    elif "How are you" in query:
-      speak("i m absloutely fine sir what about you")
+      speak("i m absloutely fine Buddy what about you")
 
    elif 'open takshila' in query:
        webbrowser.open("takshilaa.netlify.app")
-       speak("Takshila is opend sir")
+       speak("Takshila is opend Buddy")
 
    elif 'play music' in query:
        music_dir = 'D:\Songs'
@@ -94,7 +94,7 @@ if __name__== "__main__" :
   
    elif 'the time' in query:
        strTime = datetime.datetime.now().strftime("%H:%M:%S")    
-       speak(f"Sir, the time is {strTime}")
+       speak(f"Buddy, the time is {strTime}")
    
    elif 'open Code' in query:
        codepath = "C:\\Users\\atul\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe"
@@ -109,7 +109,7 @@ if __name__== "__main__" :
            speak("Email has been sent!")
        except Exception as e:
             print(e)
-            speak("Sorry sir can't able to sent mail")
+            speak("Sorry Buddy can't able to sent mail")
 
    elif"send message" in query:
            pywhatkit.sendwhatmsg("+917357284241","This is Testig protocol",1,30 )
@@ -120,27 +120,27 @@ if __name__== "__main__" :
 
 
    elif "google" in query:
-       speak("sir, what should i search on google")
+       speak("Buddy, what should i search on google")
        k = takeCommand().lower()
        webbrowser.open(f"{k}")
 
    elif "class" in query:
-      speak("Yes Offcourse sir plz tell me the time when i have to attend your class")
+      speak("Yes Offcourse Buddy plz tell me the time when i have to attend your class")
       c = takeCommand().lower()
-      speak("ohk sir i m taking your class")
+      speak("ohk Buddy i m taking your class")
       webbrowser.open("https://lovelyprofessionaluniversity.codetantra.com/secure/tla/mi.jsp?s=m&m=b6d5631a-68fa-3400-9ead-62311cdaaf55")
 
    elif "thanks" in query:
     hour = int(datetime.datetime.now().hour)
     if hour >= 0 and hour < 12:
-      speak("Thanks for using me sir, have a good day")
+      speak("Thanks for using me Buddy, have a good day")
 
     elif hour>=16 and hour > 20:
-      speak("Thanks for using me sir, have a good Evenging Sir")
+      speak("Thanks for using me Buddy, have a good Evenging Buddy")
 
 
     elif hour>=20 and hour > 0:
-      speak("Thanks for using me sir, have a good Night Sir")
+      speak("Thanks for using me Buddy, have a good Night Buddy")
       
       sys.exit()
 
@@ -158,11 +158,11 @@ if __name__== "__main__" :
        os.startfile(codepath)
 
    elif "notepad" in query:
-       speak("Opening Notepad in few seconds Sir")
+       speak("Opening Notepad in few seconds Buddy")
        p = "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Accessories\\Notepad"
        os.startfile(p)
 
-       speak("Anything Else Sir..")
-    #   print("Anything Else Sir")
+       speak("Anything Else Buddy..")
+    #   print("Anything Else Buddy")
     
 
